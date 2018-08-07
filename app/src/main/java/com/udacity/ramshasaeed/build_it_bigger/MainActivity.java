@@ -1,5 +1,6 @@
 package com.udacity.ramshasaeed.build_it_bigger;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.udacity.ramshasaeed.joketellerlib.MyJoke;
+import com.udacity.ramshasaeed.myjokelibrary.DisplayJokeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void tellJoke(View view) {
         MyJoke joke = new MyJoke();
-        Toast.makeText(this, joke.tellJoke(), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, joke.tellJoke(), Toast.LENGTH_SHORT).show();
+        // Create Intent to launch JokeFactory Activity
+        Intent intent = new Intent(this, DisplayJokeActivity.class);
+        // Put the string in the envelope
+        intent.putExtra(getString(R.string.jokePacket), joke.tellJoke());
+        startActivity(intent);
     }
 }
