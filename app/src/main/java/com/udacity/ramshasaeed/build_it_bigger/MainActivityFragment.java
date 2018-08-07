@@ -25,7 +25,7 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_main_activity, container, false);
+        View root = inflater.inflate(R.layout.activity_main_fragment, container, false);
         AdView mAdView = (AdView) root.findViewById(R.id.adView);
         // Create an ad request. Check logcat output for the hashed device ID to
         // get test ads on a physical device. e.g.
