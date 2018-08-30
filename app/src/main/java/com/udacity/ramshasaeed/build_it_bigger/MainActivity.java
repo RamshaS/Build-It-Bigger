@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void tellJoke(View view) {
+        new EndpointsAsyncTask().execute(this);
         MyJoke joke = new MyJoke();
 //        Toast.makeText(this, joke.tellJoke(), Toast.LENGTH_SHORT).show();
         // Create Intent to launch JokeFactory Activity
