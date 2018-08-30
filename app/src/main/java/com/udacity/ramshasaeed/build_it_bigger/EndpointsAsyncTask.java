@@ -14,7 +14,7 @@ import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 import java.io.IOException;
 
 public class EndpointsAsyncTask extends AsyncTask<Context, Void, String>{
-        private static MyApi myApiService = null;
+        private static JokeApi myApiService = null;
         private Context context;
 
         @Override

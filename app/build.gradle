@@ -35,5 +35,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     compile project(":JokeTellerLib")
     compile project(":myjokelibrary")
+    compile project(path: ':backend', configuration: 'android-endpoints')
+
 }
 
