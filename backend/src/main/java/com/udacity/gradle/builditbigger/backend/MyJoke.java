@@ -1,4 +1,4 @@
-package com.udacity.ramshasaeed.backend;
+package com.udacity.gradle.builditbigger.backend;
 
 public class MyJoke {
     private String myData;

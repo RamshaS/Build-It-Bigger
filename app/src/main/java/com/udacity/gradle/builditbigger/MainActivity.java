@@ -1,16 +1,16 @@
-package com.udacity.ramshasaeed.build_it_bigger;
+package com.udacity.gradle.builditbigger;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import com.udacity.ramshasaeed.joketellerlib.MyJoke;
 import com.udacity.ramshasaeed.myjokelibrary.DisplayJokeActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -40,16 +41,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-
     }
+
     public void tellJoke(View view) {
+        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
         new EndpointsAsyncTask().execute(this);
-        MyJoke joke = new MyJoke();
+     //   MyJoke joke = new MyJoke();
 //        Toast.makeText(this, joke.tellJoke(), Toast.LENGTH_SHORT).show();
         // Create Intent to launch JokeFactory Activity
-        Intent intent = new Intent(this, DisplayJokeActivity.class);
-        // Put the string in the envelope
-        intent.putExtra(getString(R.string.jokePacket), joke.tellJoke());
-        startActivity(intent);
+
     }
+
+
 }
